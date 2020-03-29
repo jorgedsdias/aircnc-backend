@@ -41,4 +41,5 @@ app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
-server.listen(3333);
+const port = process.env.PORT || 3333;
+server.listen(port);
