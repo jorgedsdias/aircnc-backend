@@ -1,0 +1,22 @@
+dracula
+material icon theme
+rocketseat
+
+firacode
+
+insomnia
+json viewer chrome
+
+mongodb atlas
+
+portquiz.net:27017
+
+npm run dev
+npx create-react-app frontend
+
+npm install -g expo-cli
+expo init {PROJETO}
+
+geny motion fun zone
+
+expo install react-native-gesture-handler react-native-reanimated
