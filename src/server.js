@@ -19,6 +19,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@teste-usfrr.mongodb.net/sema
 const connectedUsers = {};
 
 io.on('connection', socket => {
+    console.log('Client connected');
     const { user_id } = socket.handshake.query;
     connectedUsers[user_id] = socket.id;
 });
