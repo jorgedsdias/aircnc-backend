@@ -5,6 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const socketio = require('socket.io');
 const http = require('http');
+const wakeUpDyno = require('./wakeUpDyno');
 
 const app = express();
 const server = http.Server(app);
@@ -43,4 +44,7 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 const port = process.env.PORT || 3333;
-server.listen(port);
+const DYNO_URL = "http://my-aircnc.herokuapp.com";
+server.listen(port, () => {
+    wakeUpDyno(DYNO_URL);
+});
