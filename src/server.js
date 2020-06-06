@@ -44,7 +44,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 const port = process.env.PORT || 3333;
-const DYNO_URL = "http://my-aircnc.herokuapp.com";
-server.listen(port, () => {
-    wakeUpDyno(DYNO_URL);
-});
+server.listen(port);
